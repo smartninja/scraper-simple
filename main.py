@@ -3,9 +3,9 @@ import urllib2
 
 url = 'https://scrapebook22.appspot.com/'
 
-html = urllib2.urlopen(url).read()
+response = urllib2.urlopen(url).read()
 
-soup = BeautifulSoup.BeautifulSoup(html)
+soup = BeautifulSoup.BeautifulSoup(response)
 
 print soup.html.head.title.string  # should be: Scrapebook | by SmartNinja
 
